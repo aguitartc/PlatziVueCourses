@@ -4,6 +4,7 @@ new Vue({
     data () {
       return {
         tracker: {
+          title:'Ana, ets la més guapa',
           nouTitle : '',
           nouTime : 0,
           courses   : [
