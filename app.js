@@ -34,5 +34,16 @@ new Vue({
         course = {title: this.tracker.nouTitle, time: this.tracker.nouTime }
         this.tracker.courses.push(course)
       }
+    },
+
+    computed: {
+      totalTime(){
+        total = this.tracker.courses.reduce(function (accumulator, curValue) {
+
+          return accumulator + curValue.time
+        
+        }, 0)
+        return total
+      }
     }
   })
