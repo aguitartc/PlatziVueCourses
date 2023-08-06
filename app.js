@@ -4,6 +4,8 @@ new Vue({
     data () {
       return {
         tracker: {
+          nouTitle : '',
+          nouTime : 0,
           courses   : [
             { title: 'python basic', time: 12 },
             { title: 'python intermedio', time: 15 },
@@ -28,8 +30,9 @@ new Vue({
     },
   
     methods: {
-      addCoutse (course) {
-        this.courses.push(course)
+      addCourse () {
+        course = {title: this.tracker.nouTitle, time: this.tracker.nouTime }
+        this.tracker.courses.push(course)
       }
     }
   })

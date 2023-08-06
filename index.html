@@ -16,6 +16,17 @@
               {{ i }} - {{ p.title }} - {{ p.time }}
             </li>
           </ul>
+          <div>
+            <span>Afegeix nou curs:</span>
+            <input placeholder="Nom del curs" type="text" v-model="tracker.nouTitle" id="title">
+            <input type="text" v-model="tracker.nouTime" id="time">
+            
+              <a v-on:click="addCourse" href="#"class="button">Nou curs!</a>
+              
+            
+          </div>
+          
+    
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
